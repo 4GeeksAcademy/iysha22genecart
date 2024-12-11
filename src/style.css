@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #008000;
+  background-color: #008000; /* Color de fondo verde */
   font-family: Arial, sans-serif;
 }
 
@@ -13,38 +13,63 @@ body {
 }
 
 .card {
-  width: 120px;
-  height: 160px;
-  background-color: white;
-  border-radius: 10px;
-  border: 2px solid #000;
+  width: 120px; /* Ancho de la carta */
+  height: 160px; /* Altura de la carta */
+  background-color: white; /* Color de fondo de la carta */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #000; /* Borde negro */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra de la carta */
+  transition: transform 0.3s; /* Transición suave para el flip */
+  margin-bottom: 20px; /* Espacio debajo de la carta */
 }
 
-.top-suit,
-.bottom-suit {
-  font-size: 1.8rem;
-  color: red;
+.suit {
+  font-size: 2rem; /* Tamaño de la figura de la carta */
 }
 
 .number {
-  font-size: 3.5rem;
-  color: black;
+  font-size: 3.5rem; /* Tamaño del número de la carta */
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-size: 16px; /* Tamaño de la fuente del botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados del botón */
+  transition: background-color 0.3s; /* Transición suave para el color de fondo */
 }
 
-#timer {
-  margin-top: 10px;
-  font-size: 24px;
+button:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+button:focus {
+  outline: none; /* Sin contorno al hacer clic */
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 80px; /* Ancho de la carta en pantallas pequeñas */
+    height: 120px; /* Altura de la carta en pantallas pequeñas */
+  }
+
+  .number {
+    font-size: 2.5rem; /* Tamaño del número en pantallas pequeñas */
+  }
+
+  .suit {
+    font-size: 1.5rem; /* Tamaño de la figura en pantallas pequeñas */
+  }
+
+  button {
+    font-size: 14px; /* Tamaño de la fuente del botón en pantallas pequeñas */
+  }
 }

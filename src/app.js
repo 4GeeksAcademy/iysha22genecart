@@ -27,6 +27,10 @@ window.onload = function() {
   const topSuit = document.getElementById("top-suit");
   const number = document.getElementById("number");
   const bottomSuit = document.getElementById("bottom-suit");
+  const generateButton = document.getElementById("generateButton");
+  const widthInput = document.getElementById("widthInput");
+  const heightInput = document.getElementById("heightInput");
+  const applySizeButton = document.getElementById("applySizeButton");
 
   function getRandomCard() {
     const randomValue =
@@ -46,15 +50,18 @@ window.onload = function() {
     bottomSuit.style.color = suitColor;
   }
 
+  // Function to flip the card
   function flipCard() {
     card.classList.toggle("flip");
 
+    // Update the card only after the flip animation starts
     setTimeout(() => {
       if (card.classList.contains("flip")) {
-        updateCard(); 
+        updateCard(); // Change card content after flip
       }
-    }, 250); 
+    }, 250); // Sync with animation timing
   }
 
-  setInterval(flipCard, 2000); 
+  // Set interval to flip the card every second
+  setInterval(flipCard, 2000); // Flip every 2 seconds
 };

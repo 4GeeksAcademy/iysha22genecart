@@ -3,18 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Generador de cartas</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Card Generator</title>
   </head>
   <body>
     <div class="container">
-      <div class="card" id="card">
-        <div class="top-suit" id="top-suit">♥</div>
-        <div class="number" id="number">A</div>
-        <div class="bottom-suit" id="bottom-suit">♥</div>
+      <div id="card" class="card" style="width: 200px; height: 300px;">
+        <div class="card-body">
+          <div id="top-suit" class="suit"></div>
+          <div id="number" class="number"></div>
+          <div id="bottom-suit" class="suit"></div>
+        </div>
+      </div>
+      <button id="generateButton" class="btn btn-primary">Generar Carta</button>
+
+      <div>
+        <label for="widthInput">Ancho:</label>
+        <input type="text" id="widthInput" placeholder="Ej: 200" />
+        <label for="heightInput">Altura:</label>
+        <input type="text" id="heightInput" placeholder="Ej: 300" />
+        <button id="applySizeButton" class="btn btn-secondary">
+          Aplicar Tamaño
+        </button>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="path/to/your/script.js"></script>
   </body>
 </html>
